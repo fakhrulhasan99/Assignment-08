@@ -5,9 +5,9 @@ const Links = () => {
     return (
         <>
             <NavLink to={"/"}><li><a>Home</a></li></NavLink>
-            <NavLink><li><a>My Bookings</a></li></NavLink>
-            <NavLink><li><a>Blogs</a></li></NavLink>
-            <NavLink><li><a>Contact Us</a></li></NavLink>
+            <NavLink to={"/bookings"}><li><a>My Bookings</a></li></NavLink>
+            <NavLink to={"/blogs"}><li><a>Blogs</a></li></NavLink>
+            <NavLink to={"/contacts"}><li><a>Contact Us</a></li></NavLink>
         </>
     );
 };
