@@ -1,14 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import Links from '../Links/Links';
 
 const Navbar = () => {
 
-    const links = <>
-        <NavLink to={"/"}><li><a>Home</a></li></NavLink>
-        <NavLink><li><a>My Bookings</a></li></NavLink>
-        <NavLink><li><a>Blogs</a></li></NavLink>
-        <NavLink><li><a>Contact Us</a></li></NavLink>
-    </>
+    
 
     return (
         <div className="navbar bg-base-300 w-[90%] mx-auto">
@@ -20,7 +16,7 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        {links}
+                        <Links/>
                     </ul>
                 </div>
                 <div className='flex items-center'>
@@ -30,7 +26,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    {links}
+                    <Links/>
                 </ul>
             </div>
             <div className="navbar-end">
