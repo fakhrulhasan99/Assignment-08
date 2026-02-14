@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='w-[90%] mx-auto text-center p-10'>
+        <div className='w-[90%] mx-auto text-center p-10 border-4 border-white rounded-4xl bg-linear-to-b from-base-300 to-white my-4'>
             <div>
                 <h1 className='md:text-2xl lg:text-5xl lg:max-w-[80%] mx-auto font-bold py-10'>
                     Dependable Care, Backed by Trusted Professionals.
@@ -13,9 +13,9 @@ const Banner = () => {
                     <input className='w-1/4 btn btn-phu' type="submit" value="Search Now" />
                 </div>
             </div>
-            <div className='flex gap-4'>
-                <img className='w-[50%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_b34bhzb34bhzb34b.png" alt="" />
-                <img className='w-[50%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_o2fjhfo2fjhfo2fj.png" alt="" />
+            <div className='flex gap-4 justify-center'>
+                <img className='w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_b34bhzb34bhzb34b.png" alt="" />
+                <img className='w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_o2fjhfo2fjhfo2fj.png" alt="" />
             </div>
         </div>
     );
