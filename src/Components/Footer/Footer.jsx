@@ -1,9 +1,9 @@
 import React from 'react';
-import Links from '../../Links/Links';
+import Links from '../Links/Links';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-base-300 text-base-content rounded p-10">
+        <footer className="footer footer-horizontal footer-center bg-white text-base-content rounded p-10">
             <div className='flex items-center'>
                 <img className='w-8' src="/src/assets/logo.png" alt="Logo" />
                 <a className="btn btn-ghost text-xl">PhuDu</a>

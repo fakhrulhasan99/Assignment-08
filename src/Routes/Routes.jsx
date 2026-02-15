@@ -6,17 +6,17 @@ import Home from "../Pages/Home/Home";
 import Blogs from "../Pages/Blogs/Blogs"
 import Bookings from "../Pages/Bookings/Bookings"
 import Contacts from "../Pages/Contacts/Contacts"
+import Details from "../Pages/Details/Details";
 
 export const router = createBrowserRouter([
     {
         path: "/",
         Component: Root,
-        errorElement: <ErrorPage/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
-                loader: () => fetch("/public/doctorsData.json")
-                .then(res => res.json()),
+                loader: () => fetch("/public/doctorsData.json").then(res => res.json()),
                 Component: Home,
             },
             {
@@ -30,6 +30,11 @@ export const router = createBrowserRouter([
             {
                 path: "contacts",
                 Component: Contacts
+            },
+            {
+                path: "details/:id",
+                loader: () => fetch("/public/doctorsData.json").then(res => res.json()),
+                Component: Details
             }
         ],
     },

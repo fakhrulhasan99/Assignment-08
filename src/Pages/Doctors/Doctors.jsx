@@ -10,7 +10,7 @@ const Doctors = ({ data }) => {
         <div className='text-center w-[90%] mx-auto' >
             <div>
                 <h1 className='md:text-2xl lg:text-5xl lg:max-w-[80%] mx-auto font-bold py-10'>Our Best Doctors</h1>
-                <p>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
+                <p className='pb-10'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {
