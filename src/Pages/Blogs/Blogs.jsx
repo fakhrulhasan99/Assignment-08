@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Blogs = () => {
+    useEffect(() => {
+            document.title = "Blogs | Doc Talk";
+        })
     return (
         <div>
             blogs are here

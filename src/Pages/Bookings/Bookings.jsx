@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Bookings = () => {
+    useEffect(() => {
+            document.title = "Bookings | Doc Talk";
+        })
     return (
         <div>
             here are bookings

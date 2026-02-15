@@ -21,7 +21,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center'>
                     <img className='w-8' src="/src/assets/logo.png" alt="Logo" />
-                    <a className="btn btn-ghost text-xl">PhuDu</a>
+                    <a className="btn btn-ghost text-xl">DocTalk</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

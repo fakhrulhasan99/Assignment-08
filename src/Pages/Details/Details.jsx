@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import Availabilities from '../Availabilities/Availabilities';
 
 const Details = () => {
-
+    
     const { id } = useParams();
     const docId = parseInt(id);
     const details = useLoaderData();
     const singleDoc = details.find(detail => detail.id === docId);
     const { Experience, Image, Name, RegistrationNumber, Availability, Education, WorkingAt, Fee } = singleDoc;
-
+    
     const today = new Date().toLocaleDateString("en-US", {
         weekday: "long",
     });
-
+    
     const isAvailableToday = Availability.includes(today);
-
+    
+    useEffect(() => {
+        document.title = `${Name} | Doc Talk`;
+    }, [Name]);
 
     return (
         <div className='w-[90%] mx-auto'>

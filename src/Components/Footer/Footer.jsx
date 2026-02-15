@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer footer-horizontal footer-center bg-white text-base-content rounded p-10">
             <div className='flex items-center'>
                 <img className='w-8' src="/src/assets/logo.png" alt="Logo" />
-                <a className="btn btn-ghost text-xl">PhuDu</a>
+                <a className="btn btn-ghost text-xl">DocTalk</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
