@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { toast } from "react-toastify";
 import {
   BarChart,
@@ -10,7 +11,6 @@ import {
   LabelList,
 } from "recharts";
 
-// 12 Color Options
 const colors = [
   "#2563eb",
   "#16a34a",
@@ -26,7 +26,6 @@ const colors = [
   "#d946ef",
 ];
 
-// Triangle Shape
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}
     C${x + width / 3},${y + height}
@@ -88,16 +87,11 @@ const Bookings = () => {
                 margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-
-                {/* Straight Names (No Tilt) */}
                 <XAxis
                   dataKey="Name"
                   interval={0}
                 />
-
                 <YAxis width="auto" />
-
-                {/* Static Bar */}
                 <Bar
                   dataKey="Fee"
                   shape={<TriangleBar />}
@@ -109,23 +103,24 @@ const Bookings = () => {
             </ResponsiveContainer>
           </div>
         )}
-
-
-
-      </div>
-      <div className=" py-10 text-center">
-        <h2 className="text-3xl font-bold">
-          My Appointments Today
-        </h2>
-        <p className="py-6">Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
       </div>
 
       {bookings.length === 0 ? (
-        <div className="text-center text-xl text-gray-500">
-          No booking here
+        <div className="text-center">
+          <h2 className="text-5xl font-bold py-10">You have not booked any appointment yet</h2>
+          <p>Our platform connects you with veified, experienced doctors acroos various specialties -- all at your convenience</p>
+          <Link to={"/"}>
+            <button className="btn btn-phu px-20 my-10">Book an Appointment</button>
+          </Link>
         </div>
       ) : (
         <div className="grid gap-6">
+          <div className=" py-10 text-center">
+            <h2 className="text-3xl font-bold">
+              My Appointments Today
+            </h2>
+            <p className="py-6">Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
+          </div>
           {bookings.map((doctor) => (
             <div
               key={doctor.id}
