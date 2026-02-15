@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Doctor = ({ doctor }) => {
-    const { id, Experience, Image, Name, RegistrationNumber, Availability,Education } = doctor;
+    const { Experience, Image, Name, RegistrationNumber, Availability,Education } = doctor;
     return (
         <div className="card bg-base-100 p-4 shadow-sm">
             <figure className="">
