@@ -1,24 +1,48 @@
 import React, { useEffect } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
 import Availabilities from '../Availabilities/Availabilities';
+import { toast } from "react-toastify";
+
 
 const Details = () => {
-    
+
     const { id } = useParams();
     const docId = parseInt(id);
     const details = useLoaderData();
     const singleDoc = details.find(detail => detail.id === docId);
     const { Experience, Image, Name, RegistrationNumber, Availability, Education, WorkingAt, Fee } = singleDoc;
-    
+
     const today = new Date().toLocaleDateString("en-US", {
         weekday: "long",
     });
-    
+
     const isAvailableToday = Availability.includes(today);
-    
+
     useEffect(() => {
         document.title = `${Name} | Doc Talk`;
     }, [Name]);
+
+    const handleBooking = () => {
+        const existingBookings =
+            JSON.parse(localStorage.getItem("bookings")) || [];
+
+        const alreadyBooked = existingBookings.find(
+            (doc) => doc.id === singleDoc.id
+        );
+
+        if (alreadyBooked) {
+            toast.warning("You already booked this doctor!");
+            return;
+        }
+
+        const updatedBookings = [...existingBookings, singleDoc];
+
+        localStorage.setItem("bookings", JSON.stringify(updatedBookings));
+
+        toast.success("Appointment booked successfully!");
+    };
+
+
 
     return (
         <div className='w-[90%] mx-auto'>
@@ -74,17 +98,21 @@ const Details = () => {
                 </div>
                 <div className="mt-6 text-center">
                 </div>
-                <button
-                    disabled={!isAvailableToday}
-                    className={`w-[50%] py-3 rounded-xl text-xl font-semibold transition
+                <Link to={"/bookings"}>
+                    <button
+
+                        onClick={handleBooking}
+                        disabled={!isAvailableToday}
+                        className={`w-[50%] py-3 rounded-xl text-xl font-semibold transition
                     ${isAvailableToday
-                            ? "bg-blue-600 text-white hover:bg-blue-700"
-                            : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                        }
+                                ? "bg-blue-600 text-white hover:bg-blue-700"
+                                : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                            }
                     `}
-                >
-                    {isAvailableToday ? "Book Appointment" : "Not Available Today"}
-                </button>
+                    >
+                        {isAvailableToday ? "Book Appointment" : "Not Available Today"}
+                    </button>
+                </Link>
 
             </div>
 
