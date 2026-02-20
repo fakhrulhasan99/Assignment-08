@@ -8,14 +8,14 @@ const Banner = () => {
                     Dependable Care, Backed by Trusted Professionals.
                 </h1>
                 <p>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.</p>
-                <div className='w-full flex justify-center gap-4 py-10'>
-                    <input className='w-1/3 rounded-2xl px-4 bg-white' type="text" placeholder='Search any doctor' />
-                    <input className='w-1/4 btn btn-phu' type="submit" value="Search Now" />
+                <div className='w-full flex flex-col items-center md:flex-row justify-center gap-4 py-10'>
+                    <input className='md:w-1/3 rounded-2xl px-4 py-2 bg-white' type="text" placeholder='Search any doctor' />
+                    <input className='md:w-1/4 btn btn-phu' type="submit" value="Search Now" />
                 </div>
             </div>
-            <div className='flex gap-4 justify-center'>
-                <img className='w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_b34bhzb34bhzb34b.png" alt="" />
-                <img className='w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_o2fjhfo2fjhfo2fj.png" alt="" />
+            <div className='flex flex-col lg:flex-row gap-4 justify-center'>
+                <img className='lg:w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_b34bhzb34bhzb34b.png" alt="" />
+                <img className='lg:w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_o2fjhfo2fjhfo2fj.png" alt="" />
             </div>
         </div>
     );

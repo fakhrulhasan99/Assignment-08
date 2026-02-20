@@ -57,7 +57,7 @@
     "Experience": "8 years",
     "RegistrationNumber": "BMDC-146789",
     "WorkingAt": "Labaid Specialized Hospital",
-    "Availability": ["Tuesday", "Thursday"]
+    "Availability": ["Tuesday", "Thursday", "Friday"]
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
     "Experience": "16 years",
     "RegistrationNumber": "BMDC-168901",
     "WorkingAt": "Bangladesh Specialized Hospital",
-    "Availability": ["Sunday", "Wednesday"]
+    "Availability": ["Sunday", "Wednesday", "Friday"]
   },
   {
     "id": 8,
@@ -105,7 +105,7 @@
     "Experience": "18 years",
     "RegistrationNumber": "BMDC-180123",
     "WorkingAt": "National Institute of Neurosciences",
-    "Availability": ["Saturday", "Monday"]
+    "Availability": ["Saturday", "Monday", "Friday"]
   },
   {
     "id": 10,
@@ -129,7 +129,7 @@
     "Experience": "20 years",
     "RegistrationNumber": "BMDC-202345",
     "WorkingAt": "Evercare Hospital, Dhaka",
-    "Availability": ["Wednesday", "Thursday"]
+    "Availability": ["Wednesday", "Thursday", "Friday"]
   },
   {
     "id": 12,

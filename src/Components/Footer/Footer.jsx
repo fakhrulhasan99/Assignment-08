@@ -1,5 +1,6 @@
 import React from 'react';
 import Links from '../Links/Links';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
     return (
@@ -8,9 +9,12 @@ const Footer = () => {
                 <img className='w-8' src="/src/assets/logo.png" alt="Logo" />
                 <a className="btn btn-ghost text-xl">DocTalk</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <Links />
+            <div className="navbar-center">
+                <ul className="menu menu-horizontal px-1 flex flex-col md:flex-row">
+                    <NavLink to={"/"}><li className='p-2 text-lg'>Home</li></NavLink>
+                    <NavLink to={"/bookings"}><li className='p-2 text-lg'>My Bookings</li></NavLink>
+                    <NavLink to={"/blogs"}><li className='p-2 text-lg'>Blogs</li></NavLink>
+                    <NavLink to={"/contacts"}><li className='p-2 text-lg'>Contact Us</li></NavLink>
                 </ul>
             </div>
             <nav>

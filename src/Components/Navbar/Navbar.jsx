@@ -4,7 +4,7 @@ import Links from '../Links/Links';
 
 const Navbar = () => {
 
-    
+
 
     return (
         <div className="navbar bg-base-300 w-[90%] mx-auto">
@@ -16,7 +16,10 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <Links/>
+                        <NavLink to={"/"}><li className='p-2 text-lg'>Home</li></NavLink>
+                        <NavLink to={"/bookings"}><li className='p-2 text-lg'>My Bookings</li></NavLink>
+                        <NavLink to={"/blogs"}><li className='p-2 text-lg'>Blogs</li></NavLink>
+                        <NavLink to={"/contacts"}><li className='p-2 text-lg'>Contact Us</li></NavLink>
                     </ul>
                 </div>
                 <div className='flex items-center'>
@@ -26,7 +29,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <Links/>
+                    <Links />
                 </ul>
             </div>
             <div className="navbar-end">

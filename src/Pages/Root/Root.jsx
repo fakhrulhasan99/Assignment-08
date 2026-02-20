@@ -7,23 +7,19 @@ const Root = () => {
 
     const navigation = useNavigation();
 
-    const isLoading = navigation.state === "loading";
-
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen mx-auto">
 
-            {/* 🔥 Loading Overlay */}
-            {isLoading && (
-                <div className="fixed inset-0 bg-white/70 backdrop-blur-sm flex justify-center items-center z-50">
-                    <span className="loading loading-bars loading-xl text-primary"></span>
+            {navigation.state === "loading" && (
+                <div className="flex justify-center items-center h-screen">
+                    <span className="loading loading-bars loading-xl"></span>
                 </div>
             )}
-
-            <div className="md:max-w-[90%] lg:max-w-[80%] mx-auto">
-                <Navbar />
-                <Outlet />
-            </div>
-
+            {/* md:max-w-[90%] lg:max-w-[80%] */}
+            {/* <div className=" mx-auto">
+            </div> */}
+            <Navbar />
+            <Outlet />
             <Footer />
         </div>
     );

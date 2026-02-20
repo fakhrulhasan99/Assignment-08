@@ -20,7 +20,7 @@ const Doctor = ({ doctor }) => {
                     className="rounded-xl bg-blue-100 p-4" />
             </figure>
             <div className="card-body text-left">
-                <div className='flex items-center justify-between'>
+                <div className='flex items-center justify-between flex-col gap-2 xl:flex-row'>
                     <div>
                         <p
                             className={` font-semibold 
@@ -36,7 +36,7 @@ const Doctor = ({ doctor }) => {
                         {Experience} + Experience
                     </div>
                 </div>
-                <h2 className="font-bold text-3xl">{Name}</h2>
+                <h2 className="font-semibold text-2xl">{Name}</h2>
                 <p className='text-xl'>{Education}</p>
                 <p className='py-4 border-y border-dotted my-4'>Reg. No : {RegistrationNumber}</p>
                 <div className="card-actions justify-center">

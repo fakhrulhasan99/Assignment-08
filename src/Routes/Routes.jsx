@@ -16,7 +16,15 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch("/doctorsData.json").then(res => res.json()),
+                loader: () => fetch("https://raw.githubusercontent.com/fakhrulhasan99/Assignment-08/refs/heads/main/public/doctorsData.json").then(res => res.json()),
+                // loader: async () => {
+                //     const res = await fetch("/doctorsData.json");
+                //     const data = await res.json();
+
+                //     await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
+
+                //     return data;
+                // },
                 Component: Home,
             },
             {
@@ -32,6 +40,7 @@ export const router = createBrowserRouter([
                 Component: Contacts
             },
             {
+                // /doctorsData.json
                 path: "details/:id",
                 loader: () => fetch("/doctorsData.json").then(res => res.json()),
                 Component: Details
