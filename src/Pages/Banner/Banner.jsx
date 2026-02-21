@@ -1,4 +1,6 @@
 import React from 'react';
+import Banner1 from '../../assets/Gemini_Generated_Image_b34bhzb34bhzb34b.png'
+import Banner2 from '../../assets/Gemini_Generated_Image_o2fjhfo2fjhfo2fj.png'
 
 const Banner = () => {
     return (
@@ -14,8 +16,8 @@ const Banner = () => {
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row gap-4 justify-center'>
-                <img className='lg:w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_b34bhzb34bhzb34b.png" alt="" />
-                <img className='lg:w-[45%] rounded-4xl' src="/src/assets/Gemini_Generated_Image_o2fjhfo2fjhfo2fj.png" alt="" />
+                <img className='lg:w-[45%] rounded-4xl' src={Banner1} alt="" />
+                <img className='lg:w-[45%] rounded-4xl' src={Banner2} alt="" />
             </div>
         </div>
     );

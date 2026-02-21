@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 import Links from '../Links/Links';
+import Logo from '../../assets/logo.png'
 
 const Navbar = () => {
 
@@ -23,7 +24,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='flex items-center'>
-                    <img className='w-8' src="/src/assets/logo.png" alt="Logo" />
+                    <img className='w-8' src={Logo} alt="Logo" />
                     <a className="btn btn-ghost text-xl">DocTalk</a>
                 </div>
             </div>

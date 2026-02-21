@@ -5,12 +5,13 @@ import { FaWhatsappSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import Logo from '../../assets/logo.png'
 
 const Footer = () => {
     return (
         <footer className="footer footer-horizontal footer-center bg-white text-base-content rounded p-10">
             <div className='flex items-center'>
-                <img className='w-8' src="/src/assets/logo.png" alt="Logo" />
+                <img className='w-8' src={Logo} alt="Logo" />
                 <a className="btn btn-ghost text-xl">DocTalk</a>
             </div>
             <div className="navbar-center">
