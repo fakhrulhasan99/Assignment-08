@@ -3,23 +3,9 @@ import { Link, useLoaderData, useParams } from 'react-router';
 import Availabilities from '../Availabilities/Availabilities';
 import { toast } from "react-toastify";
 
-//   {
-//     "id": 11,
-//     "Name": "Dr. Rakib Ahmed",
-//     "Image": "https://i.ibb.co.com/d0jgW7wP/Gemini-Generated-Image-ecrcjpecrcjpecrc.png",
-//     "Fee": 1200,
-//     "Education": "MBBS, MS (Urology)",
-//     "Speciality": "Urologist",
-//     "Experience": "20 years",
-//     "RegistrationNumber": "BMDC-202345",
-//     "WorkingAt": "Evercare Hospital, Dhaka",
-//     "Availability": ["Wednesday", "Thursday", "Friday"]
-//   },
 const Details = () => {
 
     const { reg } = useParams();
-    // console.log(typeof reg)
-    // const docId = parseInt(id);
     const details = useLoaderData();
     const singleDoc = details.find(detail => detail.RegistrationNumber === reg);
     const { Experience, Image, Name, RegistrationNumber, Availability, Education, WorkingAt, Fee } = singleDoc;

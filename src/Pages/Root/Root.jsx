@@ -15,9 +15,7 @@ const Root = () => {
                     <span className="loading loading-bars loading-xl"></span>
                 </div>
             )}
-            {/* md:max-w-[90%] lg:max-w-[80%] */}
-            {/* <div className=" mx-auto">
-            </div> */}
+            
             <Navbar />
             <Outlet />
             <Footer />
