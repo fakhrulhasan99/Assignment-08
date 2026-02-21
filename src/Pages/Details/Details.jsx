@@ -3,13 +3,25 @@ import { Link, useLoaderData, useParams } from 'react-router';
 import Availabilities from '../Availabilities/Availabilities';
 import { toast } from "react-toastify";
 
-
+//   {
+//     "id": 11,
+//     "Name": "Dr. Rakib Ahmed",
+//     "Image": "https://i.ibb.co.com/d0jgW7wP/Gemini-Generated-Image-ecrcjpecrcjpecrc.png",
+//     "Fee": 1200,
+//     "Education": "MBBS, MS (Urology)",
+//     "Speciality": "Urologist",
+//     "Experience": "20 years",
+//     "RegistrationNumber": "BMDC-202345",
+//     "WorkingAt": "Evercare Hospital, Dhaka",
+//     "Availability": ["Wednesday", "Thursday", "Friday"]
+//   },
 const Details = () => {
 
-    const { id } = useParams();
-    const docId = parseInt(id);
+    const { reg } = useParams();
+    // console.log(typeof reg)
+    // const docId = parseInt(id);
     const details = useLoaderData();
-    const singleDoc = details.find(detail => detail.id === docId);
+    const singleDoc = details.find(detail => detail.RegistrationNumber === reg);
     const { Experience, Image, Name, RegistrationNumber, Availability, Education, WorkingAt, Fee } = singleDoc;
 
     const today = new Date().toLocaleDateString("en-US", {
@@ -60,6 +72,7 @@ const Details = () => {
                         <h3 className='text-3xl font-bold'>{Name}</h3>
                         <p className='text-2xl py-4'>{Education}</p>
                         <p className='text-xl font-bold py-4'>Working at : {WorkingAt}</p>
+                        <p className='text-xl py-4'>Experience : {Experience} +</p>
                         <p className='text-xl border-y border-slate-400 border-dashed py-4 mb-4'>Reg. No : {RegistrationNumber}</p>
                         <div className='text-xl py-2 flex'>
                             <span className='font-bold'>Availability: </span>

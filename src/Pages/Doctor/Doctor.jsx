@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 
 const Doctor = ({ doctor }) => {
 
-    const { id, Experience, Image, Name, RegistrationNumber, Availability, Education } = doctor;
+    const { Experience, Image, Name, RegistrationNumber, Availability, Education } = doctor;
     const navigate = useNavigate();
     const today = new Date().toLocaleDateString("en-US", {
         weekday: "long",
@@ -40,7 +40,7 @@ const Doctor = ({ doctor }) => {
                 <p className='text-xl'>{Education}</p>
                 <p className='py-4 border-y border-dotted my-4'>Reg. No : {RegistrationNumber}</p>
                 <div className="card-actions justify-center">
-                    <button onClick={() => navigate(`/details/${id}`)} className="btn w-[50%] border-blue-500 text-blue-500 rounded-full">View Details</button>
+                    <button onClick={() => navigate(`/details/${RegistrationNumber}`)} className="btn w-[50%] border-blue-500 text-blue-500 rounded-full">View Details</button>
                 </div>
             </div>
         </div>

@@ -12,18 +12,18 @@ import {
 } from "recharts";
 
 const colors = [
-  "#2563eb",
   "#16a34a",
   "#f59e0b",
-  "#ef4444",
-  "#8b5cf6",
-  "#ec4899",
   "#14b8a6",
+  "#d946ef",
+  "#ec4899",
   "#f97316",
   "#0ea5e9",
   "#84cc16",
+  "#ef4444",
   "#6366f1",
-  "#d946ef",
+  "#8b5cf6",
+  "#2563eb",
 ];
 
 const getPath = (x, y, width, height) => {
@@ -78,17 +78,19 @@ const Bookings = () => {
 
   return (
     <div className="w-[90%] mx-auto my-10">
-      <div className="bg-white px-10 rounded-4xl">
+      <div className="bg-white rounded-xl">
         {bookings.length > 0 && (
-          <div className="w-full h-100 mb-10">
+          <div className="w-full h-120 mb-10">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={bookings}
-                margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+                margin={{ top: 20, right: 20, left: 20, bottom: 50 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
                   dataKey="Name"
+                  angle={-45}
+                  textAnchor="end"
                   interval={0}
                 />
                 <YAxis width="auto" />
@@ -126,7 +128,7 @@ const Bookings = () => {
               key={doctor.id}
               className="bg-white p-6 rounded-2xl shadow  items-center"
             >
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col md:flex-row justify-between items-center">
                 <div>
                   <h3 className="text-2xl font-bold">
                     {doctor.Name}
@@ -141,7 +143,7 @@ const Bookings = () => {
               <div className="text-center">
                 <button
                   onClick={() => handleCancel(doctor.id)}
-                  className="text-red-700 bg-white px-4 py-2 rounded-full hover:bg-red-200 border border-red-600 w-1/2"
+                  className="text-red-700 bg-white px-4 py-2 my-2 rounded-full hover:bg-red-200 border border-red-600 md:w-1/2"
                 >
                   Cancel Appointment
                 </button>

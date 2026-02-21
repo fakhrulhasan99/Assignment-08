@@ -1,11 +1,10 @@
 import React from 'react';
-import Navbar from '../../Components/Navbar/Navbar';
+import Contacts from '../Contacts/Contacts';
 
 const ErrorPage = () => {
     return (
         <div>
-            <Navbar/>
-            Page Not Found
+            <Contacts/>
         </div>
     );
 };
